@@ -1,4 +1,4 @@
-# QAStart Backend
+# Mock Backend
 
 ## Install dependencies
 
@@ -13,9 +13,8 @@ set database URI and secret key for token encrypting
 flask app.py
 
 # Deploy project
-1. SSH to server ssh username@ip
-2. Pull repo via git pull
-3. Go to the project directory, run docker-compose up -d --build
-4. Check logs if app & database started
-5. Run migrations
-6. For changes git reset --hard && git pull && git status
+1. Pull repo via git pull
+2. run docker-compose up -d --build
+3. Check logs if app & database started
+4. Run migrations
+5. For changes git reset --hard && git pull && git status
