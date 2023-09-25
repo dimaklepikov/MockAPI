@@ -1,0 +1,21 @@
+bind:
+  host: 0.0.0.0
+  port: 7000
+
+# Understand how to hide env variables
+db:
+  type: mysql
+  url: mysql+pymysql://root:qstart1219100500try@qa_start_db:3306/qa_start
+  engine: 
+    pool_size: 100
+    max_overflow: 0 
+
+auth:
+  secret-key: 'f\xbdD\x96\xcdw\xe7UY\x83\x0e\xb4'
+
+app:
+  debug: True
+  name: QAStart
+  # default_locale: en-EN
+  default_locale: ru-RU
+  base_url: https://api.stand.qastart.ru/

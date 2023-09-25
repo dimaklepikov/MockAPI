@@ -1,0 +1,44 @@
+locale:
+  not_found: "Locale not found. Use: en-EN, ru-RU"
+
+page:
+  invalid: "Page is not found."
+
+user:
+  unexpected: "Something went wrong"
+  exists: "User already exists."
+  create: "User successfully created."
+  update: "User successfully updated."
+  delete: "User successfully deleted."
+  missing: "User not found. Check your email, name or ID"
+  not_updated: "User is not updated. Try again later."
+
+  params:
+    id:
+      missed: "User ID is missing."
+    name:
+      missed: "User name is missing."
+      not_valid: 'Validation error. Name should contain ([A-Za-z0-9._-]){3,30})$'
+    email:
+      missed: "Email is missing."
+      not_valid: 'Validation error. Email should contain ^([A-Za-z0-9._-])+@([A-Za-z0-9._-])+\.([A-Za-z]{2,63})$'
+      not_valid_hint: '{2,63} Describes min and max charecters ammount in each part of the email'
+    password: 
+      missed: "Password is missing."
+      not_valid: Validation error. Password should contain ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,50}$'
+      wrong: "Wrong password. Check your credentials"
+    personal_data_access:
+      missed: "Personal data access is not provided."
+    token:
+      success: "Success"
+      missed: "Token is missing."
+      expired: "Token has been expired. Log in again."
+      invalid: "Invalid token. Log in again."
+      unauthorized: "Auth error. Log in again."
+    phone:
+      not_valid: "Validation error. Check your phone number"
+    role:
+      not_valid: "Invalid role. Use: USER, ADMIN, ORGANIZATION."
+      not_allowed_to_create: "User should have ADMIN or ORGANIZATION role to create users."
+      not_allowed_to_update: "User should have ADMIN or ORGANIZATION role to update users."
+      not_allowed_to_delete: "User should have ADMIN or ORGANIZATION role to delete users."

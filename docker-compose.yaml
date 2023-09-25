@@ -1,0 +1,43 @@
+version: '3.7'
+
+networks:
+  qa_start:
+    driver: bridge
+    name: qa_start
+
+volumes:
+  qa_start_db:
+  
+services:
+  db:
+    restart: unless-stopped
+    image: mysql:8.0
+    init: true
+    container_name: qa_start_db
+    networks:
+      - qa_start
+    volumes:
+      - qa_start_db:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      MYSQL_DATABASE: "qa_start"
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      MYSQL_ROOT_USER: "root"
+      MYSQL_ROOT_HOST: '%' 
+
+  api:
+    restart: unless-stopped
+    build:
+      dockerfile: ops/Dockerfile
+      context: .
+    init: true
+    container_name: qa_start_api
+    networks:
+      - qa_start
+    ports:
+      - 7000:7000
+    depends_on:
+      - db

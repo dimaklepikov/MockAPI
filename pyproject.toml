@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "qa_start"
+version = "0.1.0"
+description = ""
+authors = ["Dmitriy Klepikov <klepikovdima@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+Flask = "~=2.0.2"
+Flask-SQLAlchemy = "2.5.1"
+SQLAlchemy = "1.4.28"
+argparse = "1.4.0"
+PyYAML = "6.0"
+Flask-Migrate = "^3.1.0"
+PyJWT = "1.4.2"
+phonenumbers = "^8.12.55"
+apispec = "^5.2.2"
+marshmallow = "^3.17.1"
+flask-swagger-ui = "^4.11.1"
+apispec-webframeworks = "^0.5.2"
+loguru = "^0.6.0"
+Flask-RESTful = "^0.3.9"
+PyMySQL = "^1.0.2"
+Flask-Cors = "^3.0.10"
+Faker = "^14.2.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
