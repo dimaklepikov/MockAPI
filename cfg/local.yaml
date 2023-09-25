@@ -5,7 +5,7 @@ bind:
 # Understand how to hide env variables
 db:
   type: mysql
-  url: mysql+pymysql://root:1234567@0.0.0.0:3306/qa_start
+  url: mysql+pymysql://root:1234567@0.0.0.0:3306/mock_api
   engine: 
     pool_size: 100
     max_overflow: 0 
